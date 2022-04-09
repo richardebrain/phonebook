@@ -1,0 +1,34 @@
+.searchField{
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+.searchField input{
+  width:550px;
+  border: none;
+  padding: 18px;
+  border-radius: 10px ;
+  background-color:#d41964;
+  color: white;
+  font-size: 20px;
+  
+}
+input:focus{
+  outline: none;
+
+}
+::placeholder{
+  color: white;
+  padding-left: 10px;
+}
+.fa-search{
+  position: relative;
+  left: 19px;
+  color: white;
+}
+.clear{
+  position: relative;
+  right: 20px;
+  color: white;
+}

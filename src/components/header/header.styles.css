@@ -1,0 +1,10 @@
+#header-container{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  border-bottom: 1px solid grey;
+}
+.header-title{
+  margin-left: 20px;
+}
