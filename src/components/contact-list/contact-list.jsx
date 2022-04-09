@@ -1,7 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { removeContact } from "../../redux/contact-reducer/contact.action";
 import './contact-list.css'
 
-const ContactList =({lastname,firstname,phoneNo,imgUrl})=>{
+const ContactList =({contact,removeContactFromPage})=>{
+  const {lastname,firstname,phoneNo,imgUrl}=contact
  
  return (
   <div className="contact-list">
@@ -14,10 +17,15 @@ const ContactList =({lastname,firstname,phoneNo,imgUrl})=>{
       <span className="phone ">{phoneNo}</span>
     </div>
     <div className="others">
+        <span className="clear-contact" onClick={()=>removeContactFromPage(contact)}>&#10005;</span>
 
     </div>
   
   </div>
 
 )}
-export default ContactList
+
+const mapDispatchToProps=dispatch=>({
+removeContactFromPage:contact=>dispatch(removeContact(contact))
+})
+export default connect(null,mapDispatchToProps)(ContactList)

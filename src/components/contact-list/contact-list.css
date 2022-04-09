@@ -39,4 +39,20 @@
 }
 .others{
   width: 30%;
+  position: relative;
+  top: 10px;
+  left: 60px;
 }
+.clear-contact{
+ background-color: red;
+  padding: 3px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}
+/* .clear-contact:only-child{
+  fon
+} */

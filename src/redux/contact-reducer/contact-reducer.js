@@ -1,5 +1,5 @@
 import { contactActionTypes } from "./contact.types";
-import { addContactToList } from "./contacts.utils";
+import { addContactToList ,removeContacts} from "./contacts.utils";
 const INITIAL_STATE={
   contacts:[]
 };
@@ -11,7 +11,11 @@ const INITIAL_STATE={
           ...state,
           contacts:addContactToList(state.contacts,action.payload)
         }
-    
+     case contactActionTypes.REMOVE_CONTACTS:
+     return{
+       ...state,
+       contacts:removeContacts(state.contacts,action.payload)
+     }
       default:
         return state
        

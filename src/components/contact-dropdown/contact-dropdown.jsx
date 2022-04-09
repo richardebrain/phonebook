@@ -3,7 +3,7 @@ import "./contact-dropdown.styles.css";
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 import { connect } from "react-redux";
-import addContacts from "../../redux/contact-reducer/contact.action";
+import {addContacts} from "../../redux/contact-reducer/contact.action";
 import { v4 as uuid } from "uuid";
 import { useState } from "react";
 

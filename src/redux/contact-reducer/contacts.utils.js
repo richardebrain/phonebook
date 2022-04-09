@@ -5,3 +5,12 @@ export const addContactToList=(contacts,contactToAdd)=>{
   }
   return [...contacts,...contactToAdd]
 }
+
+export const removeContacts=(contacts,contactToRemove)=>{
+ const existingContatcts = contacts.find(contact=>contact.phoneNo===contactToRemove.phoneNo)
+ if(existingContatcts){
+   return contacts.filter(
+     contact=>contact.phoneNo!==contactToRemove.phoneNo
+   )
+ }
+}

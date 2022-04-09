@@ -15,7 +15,7 @@ const ContactsPage = ({contacts})=>{
   
   <div className='contact-page'>
     {
-      contacts.map(({id,...otherProps}) => ( <ContactList  key={id} {...otherProps}/>))
+      contacts.map(contact=> ( <ContactList  key={contact.id} contact={contact}/>))
     }
   </div>
 
